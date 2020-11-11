@@ -30,45 +30,52 @@ import second from "./images/second.jpg";
 import slider from "./images/slider.jpg";
 
 export default function App() {
+  const [tabType, setTabType] = React.useState<string>("tab17");
+
+  const handleMenu = (e: any, tabType: any) => {
+    e.preventDefault();
+    console.log({ tabType });
+    setTabType(tabType);
+  };
   return (
     <>
       <header id="header">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-2">
-              <div id="logo" class="pull-left">
-                <a href="#">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-2">
+              <div id="logo" className="pull-left">
+                <a href="!#">
                   <img src={logo} alt="" title="" />
                 </a>
               </div>
             </div>
-            <div class="col-md-6">
-              <div id="phone-menu-container" class="hidden">
-                <ul class="nav-menu">
-                  <li class="menu-active">
-                    <a href="#">Home</a>
+            <div className="col-md-6">
+              <div id="phone-menu-container" className="hidden">
+                <ul className="nav-menu">
+                  <li className="menu-active">
+                    <a href="!#">Home</a>
                   </li>
                   <li>
-                    <a href="#">Find Property</a>
+                    <a href="!#">Find Property</a>
                   </li>
                   <li>
-                    <a href="#">list property </a>
+                    <a href="!#">list property </a>
                   </li>
                   <li>
-                    <a href="#">pre-construction</a>
+                    <a href="!#">pre-construction</a>
                   </li>
                   <li>
-                    <a href="#">contact</a>
+                    <a href="!#">contact</a>
                   </li>
                 </ul>
               </div>
 
               <div
                 id="nav-menu-container"
-                class="nav-menu-container pull-right-header"
+                className="nav-menu-container pull-right-header"
               >
-                <ul class="nav-menu">
-                  <li class="menu-active">
+                <ul className="nav-menu">
+                  <li className="menu-active">
                     <a href="#">Home</a>
                   </li>
                   <li>
@@ -86,9 +93,9 @@ export default function App() {
                 </ul>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="pull-right-header">
-                <ul class="top-bar-text left-top-bar">
+            <div className="col-md-4">
+              <div className="pull-right-header">
+                <ul className="top-bar-text left-top-bar">
                   <li>
                     <a data-toggle="modal" data-target="#signin_signup" href="">
                       Sign In/Sign Up
@@ -96,18 +103,18 @@ export default function App() {
                   </li>
                   <li>
                     <a href="">
-                      <i class="fa fa-shopping-cart"></i>
+                      <i className="fa fa-shopping-cart"></i>
                     </a>
                   </li>
-                  <li class="select_box">
+                  <li className="select_box">
                     <select>
                       <option>CAD </option>
                       <option>INR </option>
                       <option>CAD </option>
                     </select>
                   </li>
-                  <li class="select_box">
-                    <select class="selectpicker">
+                  <li className="select_box">
+                    <select className="selectpicker">
                       <option value="pkr" data-icon="pkr">
                         PKR
                       </option>
@@ -129,13 +136,13 @@ export default function App() {
                     </select>
                   </li>
                   <li>
-                    <div class="drawer">
-                      <a class="show">
-                        <i class="fa fa-ellipsis-v"></i>{" "}
-                        <i class="fa fa-ellipsis-v"></i>{" "}
-                        <i class="fa fa-ellipsis-v"></i>
+                    <div className="drawer">
+                      <a className="show">
+                        <i className="fa fa-ellipsis-v"></i>{" "}
+                        <i className="fa fa-ellipsis-v"></i>{" "}
+                        <i className="fa fa-ellipsis-v"></i>
                       </a>
-                      <div class="showhide">
+                      <div className="showhide">
                         <ul>
                           <li>
                             <a href="">
@@ -183,18 +190,18 @@ export default function App() {
           </div>
         </div>
       </header>
-      <div class="slider-inner">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8">
+      <div className="slider-inner">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8">
               <h1>bedroom boundless</h1>
               <h5>
-                <i class="fa fa-map-marker"></i> DELTA, 48 Boulevard Jourdan,
-                Mississauga
+                <i className="fa fa-map-marker"></i> DELTA, 48 Boulevard
+                Jourdan, Mississauga
               </h5>
             </div>
-            <div class="col-md-4">
-              <ul class="text-right priceul">
+            <div className="col-md-4">
+              <ul className="text-right priceul">
                 <li>
                   {" "}
                   57M <span>for Sale</span>
@@ -204,9 +211,9 @@ export default function App() {
             </div>
           </div>
         </div>
-        <div class="breadcrumbs">
-          <div class="container">
-            <ul class="breadcrumb">
+        <div className="breadcrumbs">
+          <div className="container">
+            <ul className="breadcrumb">
               <li>Home </li>
               <li>Ontario </li>
               <li>Markham </li>
@@ -219,82 +226,82 @@ export default function App() {
       </div>
 
       <div id="main">
-        <div class="listing_details">
-          <div class="listing_details_div">
-            <div class="container">
-              <div id="about" class="listing_details_section modeldetails">
-                <div class="row">
-                  <div class="col-md-9">
-                    <div class="row gallerysection">
-                      <div class="col-md-10">
-                        <div class="large">
+        <div className="listing_details">
+          <div className="listing_details_div">
+            <div className="container">
+              <div id="about" className="listing_details_section modeldetails">
+                <div className="row">
+                  <div className="col-md-9">
+                    <div className="row gallerysection">
+                      <div className="col-md-10">
+                        <div className="large">
                           <img src={img7} />
                         </div>
                       </div>
-                      <div class="col-md-2">
-                        <ul class="l-none row">
-                          <li class="small">
+                      <div className="col-md-2">
+                        <ul className="l-none row">
+                          <li className="small">
                             <img src={img4} />
                           </li>
-                          <li class="small">
+                          <li className="small">
                             <img src={img5} />
                           </li>
-                          <li class="small">
+                          <li className="small">
                             <img src={img6} />
                             <a href="">
-                              <i class="fa fa-image"></i> 4
+                              <i className="fa fa-image"></i> 4
                             </a>
                           </li>
                         </ul>
                       </div>
                     </div>
 
-                    <div class="clearfix"></div>
-                    <div class="modelfeatures">
-                      <div class="row">
-                        <div class="col-md-2">
-                          <div class="feature">
-                            <i class="fa fa-bed"></i>
+                    <div className="clearfix"></div>
+                    <div className="modelfeatures">
+                      <div className="row">
+                        <div className="col-md-2">
+                          <div className="feature">
+                            <i className="fa fa-bed"></i>
                             <span>2 Bedrooms</span>
                           </div>
                         </div>
-                        <div class="col-md-2">
-                          <div class="feature">
-                            <i class="fa fa-bath"></i>
+                        <div className="col-md-2">
+                          <div className="feature">
+                            <i className="fa fa-bath"></i>
                             <span>2 Bathrooms</span>
                           </div>
                         </div>
-                        <div class="col-md-2">
-                          <div class="feature">
-                            <i class="fa fa-sliders-h"></i>
+                        <div className="col-md-2">
+                          <div className="feature">
+                            <i className="fa fa-sliders-h"></i>
                             <span>501 Sqft.</span>
                           </div>
                         </div>
-                        <div class="col-md-2">
-                          <div class="feature">
-                            <i class="fa fa-expand-arrows-alt"></i>
+                        <div className="col-md-2">
+                          <div className="feature">
+                            <i className="fa fa-expand-arrows-alt"></i>
                             <span>$1000 per Sqft.</span>
                           </div>
                         </div>
-                        <div class="col-md-2">
-                          <a class="feature">
-                            <i class="fa fa-chart-bar"></i>
+                        <div className="col-md-2">
+                          <a className="feature">
+                            <i className="fa fa-chart-bar"></i>
                             <span>
                               Rental Score<small>$5,001</small>
                             </span>
                           </a>
                         </div>
-                        <div class="col-md-2">
-                          <a class="feature">
-                            <i class="fa fa-chart-pie"></i>
+                        <div className="col-md-2">
+                          <a className="feature">
+                            <i className="fa fa-chart-pie"></i>
                             <span>Investment Score</span>
                           </a>
                         </div>
                       </div>
                     </div>
-                    <div class="clearfix"></div>
-                    <div class="row">
-                      <div class="col-md-12">
+                    <div className="clearfix"></div>
+                    <div className="row">
+                      <div className="col-md-12">
                         <h2>Description</h2>
                         <p>
                           Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -306,14 +313,14 @@ export default function App() {
                         </p>
                       </div>
                     </div>
-                    <div class="clearfix"></div>
-                    <div class="row">
-                      <div class="col-md-12">
+                    <div className="clearfix"></div>
+                    <div className="row">
+                      <div className="col-md-12">
                         <h2>floor plan details</h2>
                       </div>
-                      <div class="clearfix"></div>
-                      <div class="col-md-6">
-                        <ul class="amenities l-none">
+                      <div className="clearfix"></div>
+                      <div className="col-md-6">
+                        <ul className="amenities l-none">
                           <li>
                             <b>Model name: </b>57M
                           </li>
@@ -334,8 +341,8 @@ export default function App() {
                           </li>
                         </ul>
                       </div>
-                      <div class="col-md-6">
-                        <ul class="amenities l-none">
+                      <div className="col-md-6">
+                        <ul className="amenities l-none">
                           <li>
                             <b>No. of stories or levels: </b>3
                           </li>
@@ -357,11 +364,11 @@ export default function App() {
                         </ul>
                       </div>
                     </div>
-                    <div class="clearfix"></div>
-                    <div class="row">
-                      <div class="col-md-6">
+                    <div className="clearfix"></div>
+                    <div className="row">
+                      <div className="col-md-6">
                         <h2>Deposit Structure</h2>
-                        <ul class="amenities l-none">
+                        <ul className="amenities l-none">
                           <li>$5,000 on Signing Balance of</li>
                           <li>5 % in 30 days</li>
                           <li>5% in 180 days</li>
@@ -369,9 +376,9 @@ export default function App() {
                           <li>5% on Occupancy </li>
                         </ul>
                       </div>
-                      <div class="col-md-6">
+                      <div className="col-md-6">
                         <h2>Incentives</h2>
-                        <ul class="l-none">
+                        <ul className="l-none">
                           <li>
                             - Free Assignment (Value of $7,500, plus Legal Fee &
                             HST)
@@ -384,7 +391,7 @@ export default function App() {
                           <li>- Free Moveable Island (Value of $3,500)</li>
                           <li>
                             - Capped Development Charges
-                            <ul class="l-none">
+                            <ul className="l-none">
                               <li>$10,000 for 1B and 1B+D</li>
                               <li>$12,000 for 2B and up </li>
                             </ul>
@@ -393,9 +400,9 @@ export default function App() {
                         </ul>
                       </div>
                     </div>
-                    <div class="clearfix"></div>
-                    <div class="row mb-1rem">
-                      <div class="col-md-12">
+                    <div className="clearfix"></div>
+                    <div className="row mb-1rem">
+                      <div className="col-md-12">
                         <link
                           rel="stylesheet"
                           href="tabs/jQueryTab.css"
@@ -408,62 +415,86 @@ export default function App() {
                           type="text/css"
                           media="screen"
                         />
-                        <div class="tabs-5">
-                          <ul class="tabs">
-                            <li class="active">
-                              <a href="#tab17">Main Floor</a>
+                        <div className="tabs-5">
+                          <ul className="tabs">
+                            <li className={tabType === "tab17" ? "active" : ""}>
+                              <a
+                                href="!"
+                                onClick={(e) => handleMenu(e, "tab17")}
+                              >
+                                Main Floor
+                              </a>
                             </li>
-                            <li>
-                              <a href="#tab18">Second Level</a>
+                            <li className={tabType === "tab18" ? "active" : ""}>
+                              <a
+                                href="!"
+                                onClick={(e) => handleMenu(e, "tab18")}
+                              >
+                                Second Level
+                              </a>
                             </li>
-                            <li>
-                              <a href="#tab19">Basements</a>
+                            <li className={tabType === "tab19" ? "active" : ""}>
+                              <a
+                                href="!"
+                                onClick={(e) => handleMenu(e, "tab19")}
+                              >
+                                Basements
+                              </a>
                             </li>
                           </ul>
-                          <div class="tab_content_wrapper">
-                            <div class="tab_content" id="tab17">
-                              <img class="img-responsive" src={main} />
-                            </div>
-                            <div class="tab_content" id="tab18">
-                              <img class="img-responsive" src={second} />
-                            </div>
-                            <div class="tab_content" id="tab19">
-                              <img class="img-responsive" src={basement} />
-                            </div>
+                          <div className="tab_content_wrapper">
+                            {tabType === "tab17" && (
+                              <div className="tab_content" id="tab17">
+                                <img className="img-responsive" src={main} />
+                              </div>
+                            )}
+                            {tabType === "tab18" && (
+                              <div className="tab_content" id="tab18">
+                                <img className="img-responsive" src={second} />
+                              </div>
+                            )}
+                            {tabType === "tab19" && (
+                              <div className="tab_content" id="tab19">
+                                <img
+                                  className="img-responsive"
+                                  src={basement}
+                                />
+                              </div>
+                            )}
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="clearfix"></div>
+                    <div className="clearfix"></div>
 
-                    <div class="section-border mb-1rem">
-                      <div class="row">
-                        <div class="col-md-12">
+                    <div className="section-border mb-1rem">
+                      <div className="row">
+                        <div className="col-md-12">
                           <h2>amenities nearby</h2>
                           <p> amenities map plugin here</p>
                         </div>
                       </div>
                     </div>
-                    <div class="clearfix"></div>
-                    <div class=" mb-1rem">
-                      <div class="row">
-                        <div class="col-md-12">
+                    <div className="clearfix"></div>
+                    <div className=" mb-1rem">
+                      <div className="row">
+                        <div className="col-md-12">
                           <h2>start your mortgage application</h2>
-                          <div class="mortgage-application">
-                            <div class="row">
-                              <div class="col-sm-1">
-                                <i class="fa fa-check"></i>
+                          <div className="mortgage-application">
+                            <div className="row">
+                              <div className="col-sm-1">
+                                <i className="fa fa-check"></i>
                               </div>
-                              <div class="col-sm-8">
+                              <div className="col-sm-8">
                                 <h5>
                                   You may qualify for{" "}
-                                  <label class="text-big">1.74%</label> 3 years
-                                  fixed mortgage{" "}
+                                  <label className="text-big">1.74%</label> 3
+                                  years fixed mortgage{" "}
                                 </h5>
                                 <p>Marathon Mortgage Standard - Promotion</p>
                               </div>
-                              <div class="col-sm-3">
-                                <a class="red-buttons" href="">
+                              <div className="col-sm-3">
+                                <a className="red-buttons" href="">
                                   apply now
                                 </a>
                               </div>
@@ -472,132 +503,132 @@ export default function App() {
                         </div>
                       </div>
                     </div>
-                    <div class="clearfix"></div>
-                    <div class=" mb-1rem">
-                      <div class="row">
-                        <div class="col-md-12">
+                    <div className="clearfix"></div>
+                    <div className=" mb-1rem">
+                      <div className="row">
+                        <div className="col-md-12">
                           <h2>similar Homes</h2>
 
-                          <div class="listing-grid">
-                            <div class="row">
-                              <div class="col-md-3 col-sm-3">
-                                <div class="thumbnail_one mb-30 color-secondery">
-                                  <div class="image_area overlay_one overfollow">
+                          <div className="listing-grid">
+                            <div className="row">
+                              <div className="col-md-3 col-sm-3">
+                                <div className="thumbnail_one mb-30 color-secondery">
+                                  <div className="image_area overlay_one overfollow">
                                     <img src={img001} alt="" />
                                     <a>
-                                      <span class="fa fa-heart"></span>{" "}
+                                      <span className="fa fa-heart"></span>{" "}
                                     </a>
-                                    <div class="sale sale_position">
+                                    <div className="sale sale_position">
                                       {" "}
                                       <span>sale</span>
                                     </div>
                                   </div>
-                                  <div class="thum_one_content">
-                                    <div class="thum_title">
-                                      <h5 class="hover_primary">
+                                  <div className="thum_one_content">
+                                    <div className="thum_title">
+                                      <h5 className="hover_primary">
                                         <a href="">Apolo Family Appartment</a>
                                       </h5>
                                       <p>
                                         <i
-                                          class="fa fa-map-marker"
+                                          className="fa fa-map-marker"
                                           aria-hidden="true"
                                         ></i>{" "}
                                         Ontario, Canada
                                       </p>
-                                      <h5 class="hover_primary">
+                                      <h5 className="hover_primary">
                                         <small>Sales from</small> $50,000
                                       </h5>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-md-3 col-sm-3">
-                                <div class="thumbnail_one mb-30 color-secondery">
-                                  <div class="image_area overlay_one overfollow">
+                              <div className="col-md-3 col-sm-3">
+                                <div className="thumbnail_one mb-30 color-secondery">
+                                  <div className="image_area overlay_one overfollow">
                                     <img src={img001} alt="" />
                                     <a>
-                                      <span class="fa fa-heart"></span>{" "}
+                                      <span className="fa fa-heart"></span>{" "}
                                     </a>
-                                    <div class="sale sale_position">
+                                    <div className="sale sale_position">
                                       {" "}
                                       <span>sale</span>
                                     </div>
                                   </div>
-                                  <div class="thum_one_content">
-                                    <div class="thum_title">
-                                      <h5 class="hover_primary">
+                                  <div className="thum_one_content">
+                                    <div className="thum_title">
+                                      <h5 className="hover_primary">
                                         <a href="">Apolo Family Appartment</a>
                                       </h5>
                                       <p>
                                         <i
-                                          class="fa fa-map-marker"
+                                          className="fa fa-map-marker"
                                           aria-hidden="true"
                                         ></i>{" "}
                                         Ontario, Canada
                                       </p>
-                                      <h5 class="hover_primary">
+                                      <h5 className="hover_primary">
                                         <small>Sales from</small> $50,000
                                       </h5>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-md-3 col-sm-3">
-                                <div class="thumbnail_one mb-30 color-secondery">
-                                  <div class="image_area overlay_one overfollow">
+                              <div className="col-md-3 col-sm-3">
+                                <div className="thumbnail_one mb-30 color-secondery">
+                                  <div className="image_area overlay_one overfollow">
                                     <img src={img001} alt="" />
                                     <a>
-                                      <span class="fa fa-heart"></span>{" "}
+                                      <span className="fa fa-heart"></span>{" "}
                                     </a>
-                                    <div class="sale sale_position">
+                                    <div className="sale sale_position">
                                       {" "}
                                       <span>sale</span>
                                     </div>
                                   </div>
-                                  <div class="thum_one_content">
-                                    <div class="thum_title">
-                                      <h5 class="hover_primary">
+                                  <div className="thum_one_content">
+                                    <div className="thum_title">
+                                      <h5 className="hover_primary">
                                         <a href="">Apolo Family Appartment</a>
                                       </h5>
                                       <p>
                                         <i
-                                          class="fa fa-map-marker"
+                                          className="fa fa-map-marker"
                                           aria-hidden="true"
                                         ></i>{" "}
                                         Ontario, Canada
                                       </p>
-                                      <h5 class="hover_primary">
+                                      <h5 className="hover_primary">
                                         <small>Sales from</small> $50,000
                                       </h5>
                                     </div>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-md-3 col-sm-3">
-                                <div class="thumbnail_one mb-30 color-secondery">
-                                  <div class="image_area overlay_one overfollow">
+                              <div className="col-md-3 col-sm-3">
+                                <div className="thumbnail_one mb-30 color-secondery">
+                                  <div className="image_area overlay_one overfollow">
                                     <img src={img001} alt="" />
                                     <a>
-                                      <span class="fa fa-heart"></span>{" "}
+                                      <span className="fa fa-heart"></span>{" "}
                                     </a>
-                                    <div class="sale sale_position">
+                                    <div className="sale sale_position">
                                       {" "}
                                       <span>sale</span>
                                     </div>
                                   </div>
-                                  <div class="thum_one_content">
-                                    <div class="thum_title">
-                                      <h5 class="hover_primary">
+                                  <div className="thum_one_content">
+                                    <div className="thum_title">
+                                      <h5 className="hover_primary">
                                         <a href="">Apolo Family Appartment</a>
                                       </h5>
                                       <p>
                                         <i
-                                          class="fa fa-map-marker"
+                                          className="fa fa-map-marker"
                                           aria-hidden="true"
                                         ></i>{" "}
                                         Ontario, Canada
                                       </p>
-                                      <h5 class="hover_primary">
+                                      <h5 className="hover_primary">
                                         <small>Sales from</small> $50,000
                                       </h5>
                                     </div>
@@ -609,37 +640,37 @@ export default function App() {
                         </div>
                       </div>
                     </div>
-                    <div class="clearfix"></div>
+                    <div className="clearfix"></div>
                   </div>
-                  <div class="col-md-3">
-                    <div class="listing_details_sidebar">
-                      <div class="side_widget agent_details text-center mt-0">
-                        <h4 class="mb-0">by Remington Homes </h4>
+                  <div className="col-md-3">
+                    <div className="listing_details_sidebar">
+                      <div className="side_widget agent_details text-center mt-0">
+                        <h4 className="mb-0">by Remington Homes </h4>
                         <a href="">All Listings</a>
                       </div>
 
-                      <div class="row">
-                        <div class="col-sm-12">
-                          <div class="prev-next-paging">
-                            <div class="row">
-                              <div class="col-sm-3">
-                                <a class="btn prev">
+                      <div className="row">
+                        <div className="col-sm-12">
+                          <div className="prev-next-paging">
+                            <div className="row">
+                              <div className="col-sm-3">
+                                <a className="btn prev">
                                   {" "}
-                                  <i class="fa fa-angle-left"></i> prev
+                                  <i className="fa fa-angle-left"></i> prev
                                 </a>
                               </div>
-                              <div class="col-sm-6 text-center">
-                                <div class="input-group">
+                              <div className="col-sm-6 text-center">
+                                <div className="input-group">
                                   <input
                                     type="text"
-                                    class="form-control"
+                                    className="form-control"
                                     value="1 of 45"
                                   />
                                 </div>
                               </div>
-                              <div class="col-sm-3">
-                                <a class="btn next">
-                                  next <i class="fa fa-angle-right"></i>{" "}
+                              <div className="col-sm-3">
+                                <a className="btn next">
+                                  next <i className="fa fa-angle-right"></i>{" "}
                                 </a>
                               </div>
                             </div>
@@ -647,13 +678,13 @@ export default function App() {
                         </div>
                       </div>
 
-                      <div class="row">
-                        <div class="col-md-8">
-                          <ul class="black-buttons l-none w-37 mb-0">
+                      <div className="row">
+                        <div className="col-md-8">
+                          <ul className="black-buttons l-none w-37 mb-0">
                             <li>
                               <a href="#" data-tooltip="true" title="Print">
                                 {" "}
-                                <i class="fa fa-print"></i>{" "}
+                                <i className="fa fa-print"></i>{" "}
                               </a>
                             </li>
                             <li>
@@ -663,7 +694,7 @@ export default function App() {
                                 title="Save Listing"
                               >
                                 {" "}
-                                <i class="fa fa-heart"></i>{" "}
+                                <i className="fa fa-heart"></i>{" "}
                               </a>
                             </li>
                             <li>
@@ -675,7 +706,7 @@ export default function App() {
                                 title="Share Listing"
                               >
                                 {" "}
-                                <i class="fa fa-share"></i>{" "}
+                                <i className="fa fa-share"></i>{" "}
                               </a>
                             </li>
                             <li>
@@ -687,105 +718,105 @@ export default function App() {
                                 title="Notify Me"
                               >
                                 {" "}
-                                <i class="fa fa-bell"></i>{" "}
+                                <i className="fa fa-bell"></i>{" "}
                               </a>
                             </li>
                           </ul>
                         </div>
-                        <div class="col-md-4">
-                          <a href="projectdetails.html" class="blk-buttons">
+                        <div className="col-md-4">
+                          <a href="projectdetails.html" className="blk-buttons">
                             {" "}
                             project details
                           </a>
                         </div>
                       </div>
 
-                      <div class="side_widget analytics_area">
+                      <div className="side_widget analytics_area">
                         <h3>contact </h3>
-                        <form class="form-horizontal">
-                          <div class="row">
-                            <div class="col-sm-12">
-                              <div class="control-group">
+                        <form className="form-horizontal">
+                          <div className="row">
+                            <div className="col-sm-12">
+                              <div className="control-group">
                                 <label
-                                  class="control-label text-uppercase"
-                                  for="Email"
+                                  className="control-label text-uppercase"
+                                  htmlFor="Email"
                                 >
                                   Your Name
                                 </label>
-                                <div class="controls">
+                                <div className="controls">
                                   <input
                                     id="Email"
                                     name="Email"
-                                    class="form-control"
+                                    className="form-control"
                                     type="text"
-                                    required=""
+                                    required={true}
                                   />
                                 </div>
                               </div>
                             </div>
-                            <div class="col-sm-12">
-                              <div class="control-group">
+                            <div className="col-sm-12">
+                              <div className="control-group">
                                 <label
-                                  class="control-label text-uppercase"
-                                  for="Email"
+                                  className="control-label text-uppercase"
+                                  htmlFor="Email"
                                 >
                                   your Email
                                 </label>
-                                <div class="controls">
+                                <div className="controls">
                                   <input
                                     id="Email"
                                     name="Email"
-                                    class="form-control"
+                                    className="form-control"
                                     type="text"
-                                    required=""
+                                    required={true}
                                   />
                                 </div>
                               </div>
                             </div>
-                            <div class="col-sm-12">
-                              <div class="control-group">
+                            <div className="col-sm-12">
+                              <div className="control-group">
                                 <label
-                                  class="control-label text-uppercase"
-                                  for="userid"
+                                  className="control-label text-uppercase"
+                                  htmlFor="userid"
                                 >
                                   your mobile
                                 </label>
-                                <div class="controls">
+                                <div className="controls">
                                   <input
                                     id="userid"
                                     name="userid"
-                                    class="form-control"
+                                    className="form-control"
                                     type="text"
-                                    required=""
+                                    required={true}
                                   />
                                 </div>
                               </div>
                             </div>
                           </div>
-                          <div class="row">
-                            <div class="col-sm-12">
-                              <div class="control-group">
+                          <div className="row">
+                            <div className="col-sm-12">
+                              <div className="control-group">
                                 <label
-                                  class="control-label text-uppercase"
-                                  for="userid"
+                                  className="control-label text-uppercase"
+                                  htmlFor="userid"
                                 >
                                   additional details
                                 </label>
-                                <div class="controls">
-                                  <textarea class="form-control"></textarea>
+                                <div className="controls">
+                                  <textarea className="form-control"></textarea>
                                 </div>
                               </div>
                             </div>
                           </div>
-                          <div class="row">
-                            <div class="col-sm-6">
-                              <div class="control-group">
+                          <div className="row">
+                            <div className="col-sm-6">
+                              <div className="control-group">
                                 <label
-                                  class="control-label"
-                                  for="confirmsignup"
+                                  className="control-label"
+                                  htmlFor="confirmsignup"
                                 ></label>
-                                <div class="controls">
-                                  <button class="red-buttons" type="submit">
+                                <div className="controls">
+                                  <button className="red-buttons" type="submit">
                                     submit
                                   </button>
                                 </div>
@@ -794,10 +825,10 @@ export default function App() {
                           </div>
                         </form>
                       </div>
-                      <div class="side_widget agent_details text-center">
+                      <div className="side_widget agent_details text-center">
                         <h4>google ad </h4>
                       </div>
-                      <div class="side_widget agent_details text-center">
+                      <div className="side_widget agent_details text-center">
                         <h4>agent ad </h4>
                       </div>
                     </div>
@@ -808,35 +839,36 @@ export default function App() {
           </div>
         </div>
 
-        <div class="clearfix"></div>
+        <div className="clearfix"></div>
 
-        <div id="about" class="bg3">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-3 col-md-6">
-                <div class="widget">
-                  <h4 class="widget-title">contact us</h4>
+        <div id="about" className="bg3">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-3 col-md-6">
+                <div className="widget">
+                  <h4 className="widget-title">contact us</h4>
                   <ul>
                     <li>
                       <a href="#">
-                        <i class="icofont icofont-curved-double-right"></i> Home
+                        <i className="icofont icofont-curved-double-right"></i>{" "}
+                        Home
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="icofont icofont-curved-double-right"></i>{" "}
+                        <i className="icofont icofont-curved-double-right"></i>{" "}
                         About
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="icofont icofont-curved-double-right"></i>{" "}
+                        <i className="icofont icofont-curved-double-right"></i>{" "}
                         Services
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="icofont icofont-curved-double-right"></i>{" "}
+                        <i className="icofont icofont-curved-double-right"></i>{" "}
                         Contact
                       </a>
                     </li>
@@ -844,120 +876,124 @@ export default function App() {
                 </div>
               </div>
 
-              <div class="col-lg-2 col-md-6">
-                <div class="widget">
-                  <h4 class="widget-title">quick link</h4>
+              <div className="col-lg-2 col-md-6">
+                <div className="widget">
+                  <h4 className="widget-title">quick link</h4>
                   <ul>
                     <li>
                       <a href="#">
-                        <i class="icofont icofont-curved-double-right"></i> Home
+                        <i className="icofont icofont-curved-double-right"></i>{" "}
+                        Home
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="icofont icofont-curved-double-right"></i>{" "}
+                        <i className="icofont icofont-curved-double-right"></i>{" "}
                         About
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="icofont icofont-curved-double-right"></i>{" "}
+                        <i className="icofont icofont-curved-double-right"></i>{" "}
                         Services
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="icofont icofont-curved-double-right"></i>{" "}
+                        <i className="icofont icofont-curved-double-right"></i>{" "}
                         Contact
                       </a>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div class="col-lg-2 col-md-6">
-                <div class="widget">
-                  <h4 class="widget-title">about us</h4>
+              <div className="col-lg-2 col-md-6">
+                <div className="widget">
+                  <h4 className="widget-title">about us</h4>
                   <ul>
                     <li>
                       <a href="#">
-                        <i class="icofont icofont-curved-double-right"></i> Home
+                        <i className="icofont icofont-curved-double-right"></i>{" "}
+                        Home
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="icofont icofont-curved-double-right"></i>{" "}
+                        <i className="icofont icofont-curved-double-right"></i>{" "}
                         About
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="icofont icofont-curved-double-right"></i>{" "}
+                        <i className="icofont icofont-curved-double-right"></i>{" "}
                         Services
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="icofont icofont-curved-double-right"></i>{" "}
+                        <i className="icofont icofont-curved-double-right"></i>{" "}
                         Contact
                       </a>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div class="col-lg-2 col-md-6">
-                <div class="widget">
-                  <h4 class="widget-title">properties</h4>
+              <div className="col-lg-2 col-md-6">
+                <div className="widget">
+                  <h4 className="widget-title">properties</h4>
                   <ul>
                     <li>
                       <a href="#">
-                        <i class="icofont icofont-curved-double-right"></i> Home
+                        <i className="icofont icofont-curved-double-right"></i>{" "}
+                        Home
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="icofont icofont-curved-double-right"></i>{" "}
+                        <i className="icofont icofont-curved-double-right"></i>{" "}
                         About
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="icofont icofont-curved-double-right"></i>{" "}
+                        <i className="icofont icofont-curved-double-right"></i>{" "}
                         Services
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="icofont icofont-curved-double-right"></i>{" "}
+                        <i className="icofont icofont-curved-double-right"></i>{" "}
                         Contact
                       </a>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div class="col-lg-3 col-md-6">
-                <div class="widget">
-                  <h4 class="widget-title">newsletter</h4>
+              <div className="col-lg-3 col-md-6">
+                <div className="widget">
+                  <h4 className="widget-title">newsletter</h4>
                   <ul>
                     <li>
                       <a href="#">
-                        <i class="icofont icofont-curved-double-right"></i> Home
+                        <i className="icofont icofont-curved-double-right"></i>{" "}
+                        Home
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="icofont icofont-curved-double-right"></i>{" "}
+                        <i className="icofont icofont-curved-double-right"></i>{" "}
                         About
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="icofont icofont-curved-double-right"></i>{" "}
+                        <i className="icofont icofont-curved-double-right"></i>{" "}
                         Services
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="icofont icofont-curved-double-right"></i>{" "}
+                        <i className="icofont icofont-curved-double-right"></i>{" "}
                         Contact
                       </a>
                     </li>
@@ -967,46 +1003,46 @@ export default function App() {
             </div>
           </div>
         </div>
-        <div class="copyright text-center">
-          <div class="container">
-            <div class="row">
-              <p class="col-md-12">
+        <div className="copyright text-center">
+          <div className="container">
+            <div className="row">
+              <p className="col-md-12">
                 &copy; 2020 Copyright. All Rights Reserved.
               </p>
             </div>
           </div>
         </div>
       </div>
-      <a href="#" class="back-to-top">
-        <i class="fa fa-chevron-up"></i>
+      <a href="#" className="back-to-top">
+        <i className="fa fa-chevron-up"></i>
       </a>
 
-      <div id="signin_signup" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-          <div class="modal-content">
+      <div id="signin_signup" className="modal fade" role="dialog">
+        <div className="modal-dialog">
+          <div className="modal-content">
             <br />
-            <div class="bs-example bs-example-tabs">
-              <ul id="myTab" class="nav nav-tabs">
-                <li class="active">
+            <div className="bs-example bs-example-tabs">
+              <ul id="myTab" className="nav nav-tabs">
+                <li className="active">
                   <a href="#signin" data-toggle="tab">
                     Sign In
                   </a>
                 </li>
-                <li class="">
+                <li className="">
                   <a href="#signup" data-toggle="tab">
                     Register
                   </a>
                 </li>
-                <li class="">
+                <li className="">
                   <a href="#why" data-toggle="tab">
                     Why?
                   </a>
                 </li>
               </ul>
             </div>
-            <div class="modal-body">
-              <div id="myTabContent" class="tab-content">
-                <div class="tab-pane fade in" id="why">
+            <div className="modal-body">
+              <div id="myTabContent" className="tab-content">
+                <div className="tab-pane fade in" id="why">
                   <p>
                     We need this information so that you can receive access to
                     the site and its content. Rest assured your information will
@@ -1018,48 +1054,54 @@ export default function App() {
                     for any other inquiries.
                   </p>
                 </div>
-                <div class="tab-pane active in" id="signin">
-                  <form class="form-horizontal">
+                <div className="tab-pane active in" id="signin">
+                  <form className="form-horizontal">
                     <fieldset>
-                      <div class="control-group">
-                        <label class="control-label" for="userid">
+                      <div className="control-group">
+                        <label className="control-label" htmlFor="userid">
                           Alias:
                         </label>
-                        <div class="controls">
+                        <div className="controls">
                           <input
-                            required=""
                             id="userid"
                             name="userid"
                             type="text"
-                            class="form-control"
+                            className="form-control input-medium"
                             placeholder="JoeSixpack"
-                            class="input-medium"
-                            required=""
+                            required={true}
                           />
                         </div>
                       </div>
 
-                      <div class="control-group">
-                        <label class="control-label" for="passwordinput">
+                      <div className="control-group">
+                        <label
+                          className="control-label"
+                          htmlFor="passwordinput"
+                        >
                           Password:
                         </label>
-                        <div class="controls">
+                        <div className="controls">
                           <input
-                            required=""
+                            required={true}
                             id="passwordinput"
                             name="passwordinput"
-                            class="form-control"
+                            className="form-control input-medium"
                             type="password"
                             placeholder="********"
-                            class="input-medium"
                           />
                         </div>
                       </div>
 
-                      <div class="control-group">
-                        <label class="control-label" for="rememberme"></label>
-                        <div class="controls">
-                          <label class="checkbox inline" for="rememberme-0">
+                      <div className="control-group">
+                        <label
+                          className="control-label"
+                          htmlFor="rememberme"
+                        ></label>
+                        <div className="controls">
+                          <label
+                            className="checkbox inline"
+                            htmlFor="rememberme-0"
+                          >
                             <input
                               type="checkbox"
                               name="rememberme"
@@ -1071,13 +1113,16 @@ export default function App() {
                         </div>
                       </div>
 
-                      <div class="control-group">
-                        <label class="control-label" for="signin"></label>
-                        <div class="controls">
+                      <div className="control-group">
+                        <label
+                          className="control-label"
+                          htmlFor="signin"
+                        ></label>
+                        <div className="controls">
                           <button
                             id="signin"
                             name="signin"
-                            class="btn btn-success"
+                            className="btn btn-success"
                           >
                             Sign In
                           </button>
@@ -1086,91 +1131,100 @@ export default function App() {
                     </fieldset>
                   </form>
                 </div>
-                <div class="tab-pane fade" id="signup">
-                  <form class="form-horizontal">
+                <div className="tab-pane fade" id="signup">
+                  <form className="form-horizontal">
                     <fieldset>
-                      <div class="control-group">
-                        <label class="control-label" for="Email">
+                      <div className="control-group">
+                        <label className="control-label" htmlFor="Email">
                           Email:
                         </label>
-                        <div class="controls">
+                        <div className="controls">
                           <input
                             id="Email"
                             name="Email"
-                            class="form-control"
+                            className="form-control"
                             type="text"
                             placeholder="JoeSixpack@sixpacksrus.com"
-                            required=""
+                            required={true}
                           />
                         </div>
                       </div>
 
-                      <div class="control-group">
-                        <label class="control-label" for="userid">
+                      <div className="control-group">
+                        <label className="control-label" htmlFor="userid">
                           Alias:
                         </label>
-                        <div class="controls">
+                        <div className="controls">
                           <input
                             id="userid"
                             name="userid"
-                            class="form-control"
+                            className="form-control"
                             type="text"
                             placeholder="JoeSixpack"
-                            required=""
+                            required={true}
                           />
                         </div>
                       </div>
 
-                      <div class="control-group">
-                        <label class="control-label" for="password">
+                      <div className="control-group">
+                        <label className="control-label" htmlFor="password">
                           Password:
                         </label>
-                        <div class="controls">
+                        <div className="controls">
                           <input
                             id="password"
                             name="password"
-                            class="form-control"
+                            className="form-control"
                             type="password"
                             placeholder="********"
-                            required=""
+                            required={true}
                           />
                           <em>1-8 Characters</em>
                         </div>
                       </div>
 
-                      <div class="control-group">
-                        <label class="control-label" for="reenterpassword">
+                      <div className="control-group">
+                        <label
+                          className="control-label"
+                          htmlFor="reenterpassword"
+                        >
                           Re-Enter Password:
                         </label>
-                        <div class="controls">
+                        <div className="controls">
                           <input
                             id="reenterpassword"
-                            class="form-control"
+                            className="form-control"
                             name="reenterpassword"
                             type="password"
                             placeholder="********"
-                            required=""
+                            required={true}
                           />
                         </div>
                       </div>
 
                       <br />
-                      <div class="control-group">
-                        <label class="control-label" for="humancheck">
+                      <div className="control-group">
+                        <label className="control-label" htmlFor="humancheck">
                           Humanity Check:
                         </label>
-                        <div class="controls">
-                          <label class="radio inline" for="humancheck-0">
+                        <div className="controls">
+                          <label
+                            className="radio inline"
+                            htmlFor="humancheck-0"
+                          >
                             <input
                               type="radio"
                               name="humancheck"
                               id="humancheck-0"
                               value="robot"
-                              checked="checked"
+                              checked={true}
                             />
                             I'm a Robot
                           </label>
-                          <label class="radio inline" for="humancheck-1">
+                          <label
+                            className="radio inline"
+                            htmlFor="humancheck-1"
+                          >
                             <input
                               type="radio"
                               name="humancheck"
@@ -1182,16 +1236,16 @@ export default function App() {
                         </div>
                       </div>
 
-                      <div class="control-group">
+                      <div className="control-group">
                         <label
-                          class="control-label"
-                          for="confirmsignup"
+                          className="control-label"
+                          htmlFor="confirmsignup"
                         ></label>
-                        <div class="controls">
+                        <div className="controls">
                           <button
                             id="confirmsignup"
                             name="confirmsignup"
-                            class="btn btn-success"
+                            className="btn btn-success"
                           >
                             Sign Up
                           </button>
@@ -1202,82 +1256,82 @@ export default function App() {
                 </div>
               </div>
             </div>
-            <div class="modal-footer">
-              <center>
+            <div className="modal-footer">
+              <div style={{ textAlign: "center" }}>
                 <button
                   type="button"
-                  class="btn btn-default"
+                  className="btn btn-default"
                   data-dismiss="modal"
                 >
                   Close
                 </button>
-              </center>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div id="sharelisting" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Share this property</h4>
-              <button type="button" class="close" data-dismiss="modal">
+      <div id="sharelisting" className="modal fade" role="dialog">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h4 className="modal-title">Share this property</h4>
+              <button type="button" className="close" data-dismiss="modal">
                 &times;
               </button>
             </div>
 
-            <div class="modal-body">
-              <button type="button" class="btn btn-fb">
-                <i class="fa fa-facebook-f pr-1"></i> Facebook
+            <div className="modal-body">
+              <button type="button" className="btn btn-fb">
+                <i className="fa fa-facebook-f pr-1"></i> Facebook
               </button>
 
-              <button type="button" class="btn btn-tw">
-                <i class="fa fa-twitter pr-1"></i> Twitter
+              <button type="button" className="btn btn-tw">
+                <i className="fa fa-twitter pr-1"></i> Twitter
               </button>
 
-              <button type="button" class="btn btn-gplus">
-                <i class="fa fa-google-plus-g pr-1"></i> Google +
+              <button type="button" className="btn btn-gplus">
+                <i className="fa fa-google-plus-g pr-1"></i> Google +
               </button>
 
-              <button type="button" class="btn btn-li">
-                <i class="fa fa-linkedin-in pr-1"></i> Linkedin
+              <button type="button" className="btn btn-li">
+                <i className="fa fa-linkedin-in pr-1"></i> Linkedin
               </button>
 
-              <button type="button" class="btn btn-ins">
-                <i class="fa fa-instagram pr-1"></i> Instagram
+              <button type="button" className="btn btn-ins">
+                <i className="fa fa-instagram pr-1"></i> Instagram
               </button>
 
-              <button type="button" class="btn btn-pin">
-                <i class="fa fa-pinterest pr-1"></i> Pinterest
+              <button type="button" className="btn btn-pin">
+                <i className="fa fa-pinterest pr-1"></i> Pinterest
               </button>
 
-              <button type="button" class="btn btn-yt">
-                <i class="fa fa-youtube pr-1"></i> Youtube
+              <button type="button" className="btn btn-yt">
+                <i className="fa fa-youtube pr-1"></i> Youtube
               </button>
 
-              <button type="button" class="btn btn-email">
-                <i class="fas fa-envelope pr-1"></i> Email
+              <button type="button" className="btn btn-email">
+                <i className="fas fa-envelope pr-1"></i> Email
               </button>
 
-              <button type="button" class="btn btn-whatsapp">
-                <i class="fa fa-whatsapp pr-1"></i> Whatsapp
+              <button type="button" className="btn btn-whatsapp">
+                <i className="fa fa-whatsapp pr-1"></i> Whatsapp
               </button>
             </div>
           </div>
         </div>
       </div>
-      <div id="notify" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Notify Me</h4>
-              <button type="button" class="close" data-dismiss="modal">
+      <div id="notify" className="modal fade" role="dialog">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h4 className="modal-title">Notify Me</h4>
+              <button type="button" className="close" data-dismiss="modal">
                 &times;
               </button>
             </div>
 
-            <div class="modal-body form-horizontal-ul"></div>
+            <div className="modal-body form-horizontal-ul"></div>
           </div>
         </div>
       </div>
