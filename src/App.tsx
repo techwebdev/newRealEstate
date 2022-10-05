@@ -4,30 +4,19 @@ import "./css/bootstrap.css";
 
 import logo from "./images/logo.png";
 import img001 from "./images/001.jpg";
-import img01 from "./images/01.jpg";
-import img1 from "./images/1.jpg";
-import img2 from "./images/2.jpg";
-import img3 from "./images/3.jpg";
 import img4 from "./images/4.jpg";
 import img5 from "./images/5.jpg";
 import img6 from "./images/6.jpg";
 import img7 from "./images/7.jpg";
-import img8 from "./images/8.jpg";
-import area from "./images/area.png";
 import basement from "./images/basement.jpg";
-import bath from "./images/bath.png";
-import bed from "./images/bed.png";
-import blankAvatar from "./images/blank-avatar.jpg";
+
 import calc1 from "./images/calc1.png";
 import calc2 from "./images/calc2.png";
 import calc3 from "./images/calc3.png";
-import garage from "./images/garage.png";
-import graph from "./images/graph.jpg";
-import graph1 from "./images/graph1.jpg";
 import main from "./images/main.jpg";
-import pricehistory from "./images/pricehistory.png";
+
 import second from "./images/second.jpg";
-import slider from "./images/slider.jpg";
+
 
 export default function App() {
   const [tabType, setTabType] = React.useState<string>("tab17");
