@@ -45,16 +45,16 @@ export default function App() {
                     <a href="!#">Home</a>
                   </li>
                   <li>
-                    <a href="!#">Find Property</a>
+                    <a href="/">Find Property</a>
                   </li>
                   <li>
-                    <a href="!#">list property </a>
+                    <a href="/">list property </a>
                   </li>
                   <li>
-                    <a href="!#">pre-construction</a>
+                    <a href="/">pre-construction</a>
                   </li>
                   <li>
-                    <a href="!#">contact</a>
+                    <a href="/">contact</a>
                   </li>
                 </ul>
               </div>
@@ -65,19 +65,19 @@ export default function App() {
               >
                 <ul className="nav-menu">
                   <li className="menu-active">
-                    <a href="#">Home</a>
+                    <a href="/">Home</a>
                   </li>
                   <li>
-                    <a href="#">Find Property</a>
+                    <a href="/">Find Property</a>
                   </li>
                   <li>
-                    <a href="#">list property </a>
+                    <a href="/">list property </a>
                   </li>
                   <li>
-                    <a href="#">pre-construction</a>
+                    <a href="/">pre-construction</a>
                   </li>
                   <li>
-                    <a href="#">contact</a>
+                    <a href="/">contact</a>
                   </li>
                 </ul>
               </div>
@@ -135,37 +135,53 @@ export default function App() {
                         <ul>
                           <li>
                             <a href="">
-                              <img src={calc1} alt="" title="" />
+                              <img
+                                src={calc1}
+                                alt="mortgage Calculator"
+                                title=""
+                              />
                               <span>Mortgage Calculator</span>
                             </a>
                           </li>
                           <li>
                             <a href="">
-                              <img src={calc2} alt="" title="" />
-                              <span>Affordibility Calculator</span>
+                              <img
+                                src={calc2}
+                                alt="Affordability Calculator"
+                                title=""
+                              />
+                              <span>Affordability Calculator</span>
                             </a>
                           </li>
                           <li>
                             <a href="">
-                              <img src={calc3} alt="" title="" />
+                              <img src={calc3} alt="Home Calculator" title="" />
                               <span>Home Evaluation Calculator</span>
                             </a>
                           </li>
                           <li>
                             <a href="">
-                              <img src={calc1} alt="" title="" />
+                              <img
+                                src={calc1}
+                                alt="Mortgage Calculator"
+                                title=""
+                              />
                               <span>Mortgage Calculator</span>
                             </a>
                           </li>
                           <li>
                             <a href="">
-                              <img src={calc2} alt="" title="" />
-                              <span>Affordibility Calculator</span>
+                              <img
+                                src={calc2}
+                                alt="Affordability Calculator"
+                                title=""
+                              />
+                              <span>Affordability Calculator</span>
                             </a>
                           </li>
                           <li>
                             <a href="">
-                              <img src={calc3} alt="" title="" />
+                              <img src={calc3} alt="Home" title="" />
                               <span>Home Evaluation Calculator</span>
                             </a>
                           </li>
@@ -186,7 +202,7 @@ export default function App() {
               <h1>bedroom boundless</h1>
               <h5>
                 <i className="fa fa-map-marker"></i> DELTA, 48 Boulevard
-                Jourdan, Mississauga
+                Jordan, Mississauga
               </h5>
             </div>
             <div className="col-md-4">
@@ -206,7 +222,7 @@ export default function App() {
               <li>Home </li>
               <li>Ontario </li>
               <li>Markham </li>
-              <li>Thornhill </li>
+              <li>Thornily </li>
               <li>Project Name </li>
               <li>Bedroom Boundless</li>
             </ul>
@@ -230,13 +246,13 @@ export default function App() {
                       <div className="col-md-2">
                         <ul className="l-none row">
                           <li className="small">
-                            <img src={img4} />
+                            <img src={img4} alt="small" />
                           </li>
                           <li className="small">
-                            <img src={img5} />
+                            <img src={img5}  alt="small"/>
                           </li>
                           <li className="small">
-                            <img src={img6} />
+                            <img src={img6}  alt="small"/>
                             <a href="">
                               <i className="fa fa-image"></i> 4
                             </a>
